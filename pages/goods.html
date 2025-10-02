@@ -1,38 +1,84 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Товары - Семестровая работа</title>
+        <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><span class="current-page">Товары</span></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
+        <div class="page-container">
+            
+            <!-- Хэдер -->
+            <div class="header">
+                Хэдер
+            </div>
+            
+            <!-- Навигация -->
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link current-page" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Основной контент -->
+            <div class="content">
+                <div class="goods-container">
+                    <h1 class="goods-page-title">Наши товары</h1>
+                    
+                    <div class="goods-grid">
+                        <!-- Товар 1 -->
+                        <div class="goods-card">
+                            <div class="goods-image-container">
+                                <img class="goods-image" src="../images/mishka.png" alt="Плюшевый мишка">
+                            </div>
+                            <h3 class="goods-name">Плюшевый мишка</h3>
+                            <div class="goods-price">5 000 ₽</div>
+                            <button class="goods-button">В корзину</button>
+                        </div>
+                        
+                        <!-- Товар 2 -->
+                        <div class="goods-card">
+                            <div class="goods-image-container">
+                                <img class="goods-image" src="../images/kotik.png" alt="Плюшевый котёнок">
+                            </div>
+                            <h3 class="goods-name">Плюшевый котёнок</h3>
+                            <div class="goods-price">2 000 ₽</div>
+                            <button class="goods-button">В корзину</button>
+                        </div>
+                        
+                        <!-- Товар 3 -->
+                        <div class="goods-card">
+                            <div class="goods-image-container">
+                                <img class="goods-image" src="../images/zayka.png" alt="Плюшевый зайка">
+                            </div>
+                            <h3 class="goods-name">Плюшевый зайка</h3>
+                            <div class="goods-price">1 000 ₽</div>
+                            <button class="goods-button">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Футер -->
+            <div class="footer">
+                Футер
+            </div>
+            
         </div>
-        <div>
-            <div>
-                <img src="../images/mishka.png" alt="плюшевый мишка" width="200" height="200">
-                <p>Товар: "Плюшевый мишка"</p>
-                <p>Цена: 5k</p>
-            </div>
-            <div>
-                <img src="../images/kotik.png" alt="плюшевый котёнок" width="200" height="200">
-                <p>Товар: "Плюшевый котёнок"</p>
-                <p>Цена: 2k</p>
-            </div>
-            <div>
-                <img src="../images/zayka.png" alt="плюшевый зайка" width="200" height="200">
-                <p>Товар: "Плюшевый зайка"</p>
-                <p>Цена: 1k</p>
-            </div>
-        </div>
-        <div id="footer">Футер</div>
     </body>
 </html>

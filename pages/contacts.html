@@ -1,26 +1,87 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Контакты - Семестровая работа</title>
+        <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><span class="current-page">Контакты</span></li>
-            </ul>
+        <div class="page-container">
+            
+            <!-- Хэдер -->
+            <div class="header">
+                Хэдер
+            </div>
+            
+            <!-- Навигация -->
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link current-page" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Основной контент -->
+            <div class="content">
+                <div class="contacts-container">
+                    <h1 class="contacts-page-title">Контакты</h1>
+                    
+                    <div class="contacts-card">
+                        <div class="contact-info">
+                            <!-- Email -->
+                            <div class="contact-item contact-email">
+                                <div class="contact-icon">@</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Электронная почта</div>
+                                    <div class="contact-value">evgeniya.razina.06@mail.ru</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Адрес -->
+                            <div class="contact-item contact-address">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Адрес</div>
+                                    <div class="contact-value">г. Москва, ул. 11-ая Парковая, д.36</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Телефон -->
+                            <div class="contact-item contact-phone">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <div class="contact-label">Телефон</div>
+                                    <div class="contact-value">+7 (910) 123-34-18</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-button-container">
+                            <button class="contact-button">Позвоните мне</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Футер -->
+            <div class="footer">
+                Футер
+            </div>
+            
         </div>
-        <div>
-            <p>Адрес электронной почты: evgeniya.razina.06@mail.ru</p>
-            <p>Адрес: г.Москва, ул. 11-ая Парковая, д.36</p>
-            <button>Позвоните мне</button>
-        </div>
-        <div id="footer">Футер</div>
     </body>
 </html>

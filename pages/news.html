@@ -1,39 +1,93 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Новости - Семестровая работа</title>
+        <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><span class="current-page">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
+        <div class="page-container">
+            
+            <!-- Хэдер -->
+            <div class="header">
+                Хэдер
+            </div>
+            
+            <!-- Навигация -->
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link current-page" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Основной контент -->
+            <div class="content">
+                <div class="news-container">
+                    <h1 class="news-page-title">Последние новости</h1>
+                    
+                    <div class="news-vertical">
+                        <!-- Новость 1 -->
+                        <div class="news-card">
+                            <h2 class="news-title">Отправились на сплав с друзьями в Уфу по горной реке!</h2>
+                            <div class="news-meta">
+                                <span class="news-date">30.07.2025</span>
+                                <span class="news-author">Разина Е.А.</span>
+                            </div>
+                            <p class="news-content">
+                                Невероятные приключения на горной реке в Уфе! Преодолевали пороги, 
+                                наслаждались природой и проводили время с лучшими друзьями.
+                            </p>
+                        </div>
+                        
+                        <!-- Новость 2 -->
+                        <div class="news-card">
+                            <h2 class="news-title">Романтичная прогулка на корабликах под разводными мостами в Питере с семьёй!</h2>
+                            <div class="news-meta">
+                                <span class="news-date">08.08.2025</span>
+                                <span class="news-author">Разина Е.А.</span>
+                            </div>
+                            <p class="news-content">
+                                Особенная ночь в Санкт-Петербурге! Прогулка на корабликах под разводными мостами 
+                                подарила незабываемые впечатления и атмосферу.
+                            </p>
+                        </div>
+                        
+                        <!-- Новость 3 -->
+                        <div class="news-card">
+                            <h2 class="news-title">Осуществила полёт на самолёте над Москвой!</h2>
+                            <div class="news-meta">
+                                <span class="news-date">31.08.2025</span>
+                                <span class="news-author">Разина Е.А.</span>
+                            </div>
+                            <p class="news-content">
+                                Встреча заката в небе! Полёт на самолёте над Москвой подарил захватывающие виды 
+                                на столицу с высоты птичьего полёта. Невероятные эмоции и адреналин!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Футер -->
+            <div class="footer">
+                Футер
+            </div>
+            
         </div>
-        <div>
-            <div>
-                <h2>Новость 1</h2>
-                30.07.2025 | Разина Е.А.<br>
-                Отправились на сплав с друзьями в Уфу по горной реке!
-            </div>
-            <div>
-                <h2>Новость 2</h2> 
-                08.08.2025 | Разина Е.А.<br>
-                Романтичная прогулка на корабликах под разводными мостами в Питере с семьёй!
-
-            </div>
-            <div>
-                <h2>Новость 3</h2>
-                31.08.2025 | Разина Е.А.<br>
-                Осуществила полёт на самолёте над Москвой!
-            </div>
-        </div>
-        <div id="footer">Футер</div>
     </body>
 </html>

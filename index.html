@@ -1,45 +1,113 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Семестровая работа</title>
+        <link rel="stylesheet" href="style/styles.css">
     </head>
+    
     <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="pages/news.html">Новости</a></li>
-                <li><a href="pages/practices.html">Практики</a></li>
-                <li><a href="pages/goods.html">Товары</a></li>
-                <li><a href="pages/contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div id="content">
-            <p>Информация об авторе</p>
-            <img src="images/my_photo.png" alt="фото автора" width="270" height="360">
-            <p>Разина Евгения Андреевна</p>
-            <p>ЭФБО-02-24</p>
-            <p>Обо мне: Мне 19. Родилась в городе Выкса. Переехала в Москву. Учусь в лучшем технологическом университете страны!
-                Путешествую, люблю экстрим. Развиваюсь, танцую Hip hop girly и живу лучшую жизнь!
-            </p>
-            <div>Навык 1</div>
-            <div>Навык 2</div>
-            <div>Навык 3</div>
-            <div>Навык 4</div>
-            <div>
-                Мой опыт работы:
-                <div>
-                    Опыт 1<br>
-                    Создавала разнообразные проекты ручной работы. Занималась продажей.
-                </div>
-                <div>
-                    Опыт 2<br>
-                    Создавала презентации и макеты на заказ.
-                </div>
+        <div class="page-container">
+            
+            <!-- Хэдер -->
+            <div class="header">
+                Хэдер
             </div>
+            
+            <!-- Навигация -->
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Основной контент -->
+            <div class="content">
+                
+                <!-- Профиль -->
+                <div class="profile-header">
+                    <h1 class="profile-title">Информация об авторе</h1>
+                    <img class="profile-photo" 
+                         src="images/my_photo.png" 
+                         alt="Фото автора" 
+                         width="270" 
+                         height="360">
+                    <h2 class="profile-name">Разина Евгения Андреевна</h2>
+                    <p class="profile-group">ЭФБО-02-24</p>
+                </div>
+                
+                <!-- Обо мне -->
+                <div class="about-me">
+                    <p>
+                        Live: Мне 19. Родилась в городе Выкса. Переехала в Москву. 
+                        Учусь в лучшем технологическом университете страны - РТУ МИРЭА!
+                        Путешествую, люблю экстрим. Развиваюсь, танцую Hip hop girly 
+                        и живу лучшую жизнь!
+                    </p>
+                </div>
+                
+                <!-- Навыки -->
+                <div class="skills-container">
+                    <div class="skill-tag">CSS</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">HTML</div>
+                </div>
+                
+                <!-- Опыт работы -->
+                <div class="experience-section">
+                    <h2 class="section-title">Мой опыт работы</h2>
+                    
+                    <div class="experience-card">
+                        <h3 class="experience-title">Яндекс Практикум</h3>
+                        <p class="experience-desc">
+                            Курс "Фронтенд-разработчик"<br>
+                            Освоение полного цикла разработки клиентской части веб-приложений, 
+                            включая верстку, JavaScript и фреймворки.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3 class="experience-title">Фронтенд-разработчик в Яндекс 360 (стажировка)</h3>
+                        <p class="experience-desc">
+                            Создание продуктов для пользователей или организаций, 
+                            постоянно работаем над качесвтом и производительностью!
+                        </p>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3 class="experience-title">РТУ МИРЭА</h3>
+                        <p class="experience-desc">
+                            Фуллстек-разработка<br>
+                            Углубленное изучение полного цикла веб-разработки, 
+                            включая клиентские и серверные технологии, архитектуру приложений 
+                            и современные методологии разработки.
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- Футер -->
+            <div class="footer">
+                Футер
+            </div>
+            
         </div>
-        <div id="footer">Футер</div> 
-    </body> 
+    </body>
 </html>

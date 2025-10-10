@@ -560,7 +560,6 @@ main.content {
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
 
 /* Основной контейнер контактов */
-/* Добавь это в CSS для contacts */
 main.contacts-container {
     max-width: none !important;
     padding: 40px 60px !important; /* Больше отступов по бокам */
@@ -683,9 +682,8 @@ main.contacts-container {
 /* Кнопка звонка */
 .contact-button-container {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #e9ecef;
+    width: 100%;
+    margin-top: 50px;
 }
 
 .contact-button {
@@ -701,6 +699,8 @@ main.contacts-container {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     min-width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 .contact-button:hover {
@@ -748,9 +748,13 @@ main.contacts-container {
     .contact-icon {
         align-self: center;
     }
-    
-    .contact-button {
-        width: 100%;
-        min-width: auto;
-    }
+}
+
+.contact-item p {
+    white-space: nowrap; /* Запрещает перенос текста на новую строку */
+}
+
+
+.contact-item p {
+    white-space: nowrap;
 }

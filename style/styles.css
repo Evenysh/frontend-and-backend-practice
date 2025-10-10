@@ -14,6 +14,14 @@ body {
     background: white; /* Белый фон для основного содержимого */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
     box-shadow: 0 0 30px rgba(0,0,0,0.1); /* Легкая тень вокруг всего контента */
+    /* Сеточный макет для семантических областей */
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
 }
 
 /* ===== ШАПКА ===== */
@@ -25,12 +33,16 @@ body {
     font-size: 28px; /* Размер шрифта */
     font-weight: 300; /* Легкое начертание шрифта */
     letter-spacing: 2px; /* Расстояние между буквами */
+    /*Привязка к области сетки*/
+    grid-area: header;
 }
 
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
     background: #2c3e50; /* Темно-синий фон навигации */
     padding: 20px 0; /* Вертикальные отступы */
+    /*Привязка к области сетки*/
+    grid-area: nav;
 }
 
 .nav-list {
@@ -61,10 +73,12 @@ body {
 }
 
 /* ===== ОСНОВНОЙ КОНТЕНТ ===== */
-.content {
+main.content {
     padding: 40px; /* Внутренние отступы контента */
     max-width: 900px; /* Максимальная ширина контента */
     margin: 0 auto; /* Центрирование контента */
+    /*Привязка к области сетки*/
+    grid-area: main;
 }
 
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
@@ -114,12 +128,11 @@ body {
 }
 
 /* ===== НАВЫКИ ===== */
-.skills-container {
-    display: flex; /* Горизонтальное расположение навыков */
-    justify-content: center; /* Выравнивание по центру */
-    flex-wrap: wrap; /* Перенос на новую строку при необходимости */
-    gap: 15px; /* Расстояние между навыками */
-    margin: 30px 0; /* Вертикальные отступы */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
 }
 
 .skill-tag {
@@ -149,6 +162,12 @@ body {
     text-align: center; /* Выравнивание по центру */
     margin-bottom: 30px; /* Отступ снизу */
     font-weight: 300; /* Легкое начертание шрифта */
+}
+
+.experience-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .experience-card {
@@ -185,7 +204,37 @@ body {
     text-align: center; /* Выравнивание по центру */
     padding: 30px; /* Внутренние отступы */
     margin-top: 50px; /* Отступ сверху */
+    /*Привязка к области сетки*/
+    grid-area: footer;
 }
+
+/* ===== АДАПТИВНОСТЬ ===== */
+/*Медиа-запросы для мобильных устройств*/
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main.content {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -219,6 +268,7 @@ body {
     border: 1px solid #e9ecef;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .news-card::before {
@@ -250,16 +300,25 @@ body {
     width: 8px;
 }
 
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 .news-title {
     color: #2c3e50;
     font-size: 1.4rem;
     margin-bottom: 15px;
+    line-height: 1.3;
 }
 
 .news-meta {
+    display: flex;
+    gap: 15px;
     color: #6c757d;
     font-size: 0.9rem;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .news-date {
@@ -276,9 +335,45 @@ body {
     color: #495057;
     line-height: 1.6;
     font-size: 1rem;
+    margin: 0;
 }
 
+/* ===== АДАПТИВНОСТЬ ===== */
+.current-page {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        padding: 20px 15px;
+    }
+
+    .news-page-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .news-card {
+        padding: 20px;
+    }
+
+    .news-title {
+        font-size: 1.2rem;
+    }
+
+    .news-meta {
+        flex-direction: column;  /* Ставим дату и автора в столбик */
+        gap: 5px;
+    }
+}
    
+
+
+
+
+
+
 
 
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ ТОВАРОВ ===== */
@@ -309,6 +404,7 @@ body {
     margin: 15px auto;
     border-radius: 2px;
 }
+
 
 /* Сетка товаров */
 .goods-grid {
@@ -390,6 +486,7 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    width: 100%;
 }
 
 .goods-button:hover {
@@ -451,7 +548,11 @@ body {
         width: 180px;
         height: 180px;
     }
+
 }
+
+
+
 
 
 
@@ -459,10 +560,19 @@ body {
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
 
 /* Основной контейнер контактов */
-.contacts-container {
-    max-width: 800px;
+/* Добавь это в CSS для contacts */
+main.contacts-container {
+    max-width: none !important;
+    padding: 40px 60px !important; /* Больше отступов по бокам */
+}
+
+.contacts-content {
+    max-width: 800px; /* Широкая область контента */
     margin: 0 auto;
-    padding: 40px 20px;
+}
+
+.contacts-content {
+    width: 100%;
 }
 
 /* Заголовок страницы */

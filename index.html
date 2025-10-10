@@ -11,12 +11,12 @@
         <div class="page-container">
             
             <!-- Хэдер -->
-            <div class="header">
-                Хэдер
-            </div>
+            <header class="header">
+                <h1>Хэдер</h1>
+            </header>
             
             <!-- Навигация -->
-            <div class="nav">
+            <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Главная</a>
@@ -34,13 +34,13 @@
                         <a class="nav-link" href="pages/contacts.html">Контакты</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             
             <!-- Основной контент -->
-            <div class="content">
+            <main class="content">
                 
                 <!-- Профиль -->
-                <div class="profile-header">
+                <article class="profile-header">
                     <h1 class="profile-title">Информация об авторе</h1>
                     <img class="profile-photo" 
                          src="images/my_photo.png" 
@@ -49,36 +49,41 @@
                          height="360">
                     <h2 class="profile-name">Разина Евгения Андреевна</h2>
                     <p class="profile-group">ЭФБО-02-24</p>
-                </div>
+                </article>
                 
                 <!-- Обо мне -->
-                <div class="about-me">
+                <section class="about-me">
+                    <h2>Обо мне:</h2>
                     <p>
                         Live: Мне 19. Родилась в городе Выкса. Переехала в Москву. 
                         Учусь в лучшем технологическом университете страны - РТУ МИРЭА!
                         Путешествую, люблю экстрим. Развиваюсь, танцую Hip hop girly 
                         и живу лучшую жизнь!
                     </p>
-                </div>
+                </section>
                 
                 <!-- Навыки -->
-                <div class="skills-container">
-                    <div class="skill-tag">CSS</div>
-                    <div class="skill-tag">JavaScript</div>
-                    <div class="skill-tag">HTML</div>
-                </div>
+                <section class="skills-container">
+                    <h2>Мои навыки:</h2>
+                    <div class="skills-grid">
+                        <div class="skill-tag">CSS</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">HTML</div>
+                    </div>
+                </section>
                 
                 <!-- Опыт работы -->
-                <div class="experience-section">
+                <section class="experience-section">
                     <h2 class="section-title">Мой опыт работы</h2>
-                    
-                    <div class="experience-card">
-                        <h3 class="experience-title">Яндекс Практикум</h3>
-                        <p class="experience-desc">
-                            Курс "Фронтенд-разработчик"<br>
-                            Освоение полного цикла разработки клиентской части веб-приложений, 
-                            включая верстку, JavaScript и фреймворки.
-                        </p>
+                    <div class="experience-grid">
+                        <article class="experience-card">
+                            <h3 class="experience-title">Яндекс Практикум</h3>
+                            <p class="experience-desc">
+                                Курс "Фронтенд-разработчик"<br>
+                                Освоение полного цикла разработки клиентской части веб-приложений, 
+                                включая верстку, JavaScript и фреймворки.
+                            </p>
+                        </article>
                     </div>
                     
                     <div class="experience-card">
@@ -99,14 +104,14 @@
                         </p>
                     </div>
                     
-                </div>
+                </section>
                 
-            </div>
+            </main>
             
             <!-- Футер -->
-            <div class="footer">
-                Футер
-            </div>
+            <footer class="footer">
+                <p>Футер</p>
+            </footer>
             
         </div>
     </body>

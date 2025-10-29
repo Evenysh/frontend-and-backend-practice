@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Товары - Семестровая работа</title>
-        <link rel="stylesheet" href="../style/styles.css">
-    </head>
-    <body>
-        <div class="page-container">
-            
-            <!-- Хэдер -->
-            <header class="header">
-                <h1>Товары</h1>
-            </header>
-            
-            <!-- Навигация -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="practices.html">Практики</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link current-page" href="goods.html">Товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- Основной контент -->
-            <main>
-                <section class="goods-container">
-                    <h1 class="goods-page-title">Наши товары</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <button class="theme-switcher__btn" id="themeToggle" aria-label="Переключить тему">
+            <span class="theme-switcher__icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="page">
+        <!-- Хэдер -->
+        <header class="header">
+            <h1 class="header__title">Товары</h1>
+        </header>
+        
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="products">
+                <h2 class="products__title">Наши товары</h2>
+                
+                <div class="products__grid">
+                    <!-- Товар 1 -->
+                    <article class="product-card product-card--sale">
+                        <div class="product-card__badge">-20%</div>
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/mishka.png" alt="Плюшевый мишка">
+                        </div>
+                        <h3 class="product-card__title">Плюшевый мишка</h3>
+                        <div class="product-card__price">
+                            <span class="product-card__current-price">4 000 ₽</span>
+                            <span class="product-card__old-price">5 000 ₽</span>
+                        </div>
+                        <button class="product-card__button">В корзину</button>
+                    </article>
                     
-                    <div class="goods-grid">
-                        <!-- Товар 1 -->
-                        <article class="goods-card">
-                            <div class="goods-image-container">
-                                <img class="goods-image" src="../images/mishka.png" alt="Плюшевый мишка">
-                            </div>
-                            <h3 class="goods-name">Плюшевый мишка</h3>
-                            <div class="goods-price">5 000 ₽</div>
-                            <button class="goods-button">В корзину</button>
-                        </article>
-                        
-                        <!-- Товар 2 -->
-                        <article class="goods-card">
-                            <div class="goods-image-container">
-                                <img class="goods-image" src="../images/kotik.png" alt="Плюшевый котёнок">
-                            </div>
-                            <h3 class="goods-name">Плюшевый котёнок</h3>
-                            <div class="goods-price">2 000 ₽</div>
-                            <button class="goods-button">В корзину</button>
-                        </article>
-                        
-                        <!-- Товар 3 -->
-                        <article class="goods-card">
-                            <div class="goods-image-container">
-                                <img class="goods-image" src="../images/zayka.png" alt="Плюшевый зайка">
-                            </div>
-                            <h3 class="goods-name">Плюшевый зайка</h3>
-                            <div class="goods-price">1 000 ₽</div>
-                            <button class="goods-button">В корзину</button>
-                        </article>
-                    </div>
-                </section>
-            </main>
-            
-            <!-- Футер -->
-            <footer class="footer">
-                <p>© 2025 Все права защищены. Товары</p>
-            </footer>
-            
-        </div>
-    </body>
+                    <!-- Товар 2 -->
+                    <article class="product-card product-card--popular">
+                        <div class="product-card__badge">Хит</div>
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/kotik.png" alt="Плюшевый котёнок">
+                        </div>
+                        <h3 class="product-card__title">Плюшевый котёнок</h3>
+                        <div class="product-card__price">
+                            <span class="product-card__current-price">2 000 ₽</span>
+                        </div>
+                        <button class="product-card__button">В корзину</button>
+                    </article>
+                    
+                    <!-- Товар 3 -->
+                    <article class="product-card">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/zayka.png" alt="Плюшевый зайка">
+                        </div>
+                        <h3 class="product-card__title">Плюшевый зайка</h3>
+                        <div class="product-card__price">
+                            <span class="product-card__current-price">1 000 ₽</span>
+                        </div>
+                        <button class="product-card__button">В корзину</button>
+                    </article>
+
+                    <!-- Товар 4 - для демонстрации состояния выбранного товара -->
+                    <article class="product-card product-card--selected">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/mishka.png" alt="Плюшевый мишка премиум">
+                        </div>
+                        <h3 class="product-card__title">Мишка премиум</h3>
+                        <div class="product-card__price">
+                            <span class="product-card__current-price">8 000 ₽</span>
+                        </div>
+                        <button class="product-card__button product-card__button--added">В корзине</button>
+                    </article>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Футер -->
+        <footer class="footer">
+            <p class="footer__text">© 2025 Все права защищены. Товары</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js" defer></script>
+</body>
 </html>

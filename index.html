@@ -1,118 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-        <link rel="stylesheet" href="style/styles.css">
-    </head>
-    
-    <body>
-        <div class="page-container">
-            
-            <!-- Хэдер -->
-            <header class="header">
-                <h1>Главная</h1>
-            </header>
-            
-            <!-- Навигация -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/news.html">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/practices.html">Практики</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/goods.html">Товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacts.html">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- Основной контент -->
-            <main class="content">
-                
-                <!-- Профиль -->
-                <article class="profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" 
-                         src="images/my_photo.png" 
-                         alt="Фото автора" 
-                         width="270" 
-                         height="360">
-                    <h2 class="profile-name">Разина Евгения Андреевна</h2>
-                    <p class="profile-group">ЭФБО-02-24</p>
-                </article>
-                
-                <!-- Обо мне -->
-                <section class="about-me">
-                    <h2>Обо мне:</h2>
-                    <p>
-                        Live: Мне 19. Родилась в городе Выкса. Переехала в Москву. 
-                        Учусь в лучшем технологическом университете страны - РТУ МИРЭА!
-                        Путешествую, люблю экстрим. Развиваюсь, танцую Hip hop girly 
-                        и живу лучшую жизнь!
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <button class="theme-switcher__btn" id="themeToggle" aria-label="Переключить тему">
+            <span class="theme-switcher__icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">Моё портфолио</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/my_photo.png" alt="Фото">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Разина Евгения</h2>
+                        <p class="profile__group">ЭФБО-02-24</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        Студент, увлекаюсь веб-разработкой. Изучаю HTML, CSS и
+                        JavaScript.
+                        Люблю создавать красивые и функциональные сайты.
                     </p>
-                </section>
-                
-                <!-- Навыки -->
-                <section class="skills-container">
-                    <h2>Мои навыки:</h2>
-                    <div class="skills-grid">
-                        <div class="skill-tag">CSS</div>
-                        <div class="skill-tag">JavaScript</div>
-                        <div class="skill-tag">HTML</div>
+                </div>
+            </section>
+
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--html">
+                        <span class="skill__name">HTML</span>
                     </div>
-                </section>
-                
-                <!-- Опыт работы -->
-                <section class="experience-section">
-                    <h2 class="section-title">Мой опыт работы</h2>
-                    <div class="experience-grid">
-                        <article class="experience-card">
-                            <h3 class="experience-title">Яндекс Практикум</h3>
-                            <p class="experience-desc">
-                                Курс "Фронтенд-разработчик"<br>
-                                Освоение полного цикла разработки клиентской части веб-приложений, 
-                                включая верстку, JavaScript и фреймворки.
-                            </p>
-                        </article>
+                    <div class="skill skill--css">
+                        <span class="skill__name">CSS</span>
                     </div>
-                    
-                    <div class="experience-card">
-                        <h3 class="experience-title">Фронтенд-разработчик в Яндекс 360 (стажировка)</h3>
-                        <p class="experience-desc">
-                            Создание продуктов для пользователей или организаций, 
-                            постоянно работаем над качесвтом и производительностью!
-                        </p>
+                    <div class="skill skill--js">
+                        <span class="skill__name">JavaScript</span>
                     </div>
-                    
-                    <div class="experience-card">
-                        <h3 class="experience-title">РТУ МИРЭА</h3>
-                        <p class="experience-desc">
-                            Фуллстек-разработка<br>
-                            Углубленное изучение полного цикла веб-разработки, 
-                            включая клиентские и серверные технологии, архитектуру приложений 
-                            и современные методологии разработки.
-                        </p>
+                </div>
+            </section>
+
+            <!-- Проекты -->
+            <section class="projects">
+                <h2 class="projects__title">Проекты</h2>
+                <div class="projects__grid">
+                    <div class="project-card">
+                        <h3 class="project-card__title">Личный сайт</h3>
+                        <p class="project-card__desc">Сайт-портфолио на HTML и
+                        CSS</p>
                     </div>
-                    
-                </section>
-                
-            </main>
-            
-            <!-- Футер -->
-            <footer class="footer">
-                <p>© 2025 Все права защищены. Главная</p>
-            </footer>
-            
-        </div>
-    </body>
+                    <div class="project-card">
+                        <h3 class="project-card__title">Тodo приложение</h3>
+                        <p class="project-card__desc">Простое приложение для
+                        задач</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мой сайт</p>
+        </footer>
+    </div>
+</body>
 </html>

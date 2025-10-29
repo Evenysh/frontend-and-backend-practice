@@ -1,93 +1,123 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Новости - Семестровая работа</title>
-        <link rel="stylesheet" href="../style/styles.css">
-    </head>
-    <body>
-        <div class="page-container">
-            
-            <!-- Хэдер -->
-            <header class="header">
-                <h1>Новости</h1>
-            </header>
-            
-            <!-- Навигация -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link current-page" href="news.html">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="practices.html">Практики</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="goods.html">Товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacts.html">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- Основной контент -->
-            <main class="content">
-                <div class="news-container">
-                    <h1 class="news-page-title">Последние новости</h1>
-                    
-                    <div class="news-vertical">
-                        <!-- Новость 1 -->
-                        <article class="news-card">
-                            <h2 class="news-title">Отправились на сплав с друзьями в Уфу по горной реке!</h2>
-                            <div class="news-meta">
-                                <span class="news-date">30.07.2025</span>
-                                <span class="news-author">Разина Е.А.</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <!-- Переключатель темы -->
+    <div class="theme-switcher">
+        <button class="theme-switcher__btn" id="themeToggle" aria-label="Переключить тему">
+            <span class="theme-switcher__icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="page">
+        <!-- Хэдер -->
+        <header class="header">
+            <h1 class="header__title">Новости</h1>
+        </header>
+        
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Последние новости</h2>
+                <p class="news__subtitle">Самые интересные события и приключения</p>
+                
+                <div class="news__list">
+                    <!-- Новость 1 -->
+                    <article class="news-card news-card--featured">
+                        <div class="news-card__header">
+                            <h3 class="news-card__title">Отправились на сплав с друзьями в Уфу по горной реке!</h3>
+                            <div class="news-card__meta">
+                                <span class="news-card__date">30.07.2025</span>
+                                <span class="news-card__author">Разина Е.А.</span>
                             </div>
-                            <p class="news-content">
+                        </div>
+                        <div class="news-card__content">
+                            <p class="news-card__text">
                                 Невероятные приключения на горной реке в Уфе! Преодолевали пороги, 
                                 наслаждались природой и проводили время с лучшими друзьями.
                             </p>
-                        </article>
-                        
-                        <!-- Новость 2 -->
-                        <article class="news-card">
-                            <h2 class="news-title">Романтичная прогулка на корабликах под разводными мостами в Питере с семьёй!</h2>
-                            <div class="news-meta">
-                                <span class="news-date">08.08.2025</span>
-                                <span class="news-author">Разина Е.А.</span>
+                        </div>
+                        <div class="news-card__footer">
+                            <button class="news-card__button">Читать далее</button>
+                            <span class="news-card__badge">Новое</span>
+                        </div>
+                    </article>
+                    
+                    <!-- Новость 2 -->
+                    <article class="news-card">
+                        <div class="news-card__header">
+                            <h3 class="news-card__title">Романтичная прогулка на корабликах под разводными мостами в Питере с семьёй!</h3>
+                            <div class="news-card__meta">
+                                <span class="news-card__date">08.08.2025</span>
+                                <span class="news-card__author">Разина Е.А.</span>
                             </div>
-                            <p class="news-content">
+                        </div>
+                        <div class="news-card__content">
+                            <p class="news-card__text">
                                 Особенная ночь в Санкт-Петербурге! Прогулка на корабликах под разводными мостами 
                                 подарила незабываемые впечатления и атмосферу.
                             </p>
-                        </article>
-                        
-                        <!-- Новость 3 -->
-                        <article class="news-card">
-                            <h2 class="news-title">Осуществила полёт на самолёте над Москвой!</h2>
-                            <div class="news-meta">
-                                <span class="news-date">31.08.2025</span>
-                                <span class="news-author">Разина Е.А.</span>
+                        </div>
+                        <div class="news-card__footer">
+                            <button class="news-card__button">Читать далее</button>
+                        </div>
+                    </article>
+                    
+                    <!-- Новость 3 -->
+                    <article class="news-card">
+                        <div class="news-card__header">
+                            <h3 class="news-card__title">Осуществила полёт на самолёте над Москвой!</h3>
+                            <div class="news-card__meta">
+                                <span class="news-card__date">31.08.2025</span>
+                                <span class="news-card__author">Разина Е.А.</span>
                             </div>
-                            <p class="news-content">
+                        </div>
+                        <div class="news-card__content">
+                            <p class="news-card__text">
                                 Встреча заката в небе! Полёт на самолёте над Москвой подарил захватывающие виды 
                                 на столицу с высоты птичьего полёта. Невероятные эмоции и адреналин!
                             </p>
-                        </article>
-                    </div>
+                        </div>
+                        <div class="news-card__footer">
+                            <button class="news-card__button">Читать далее</button>
+                        </div>
+                    </article>
                 </div>
-            </main>
-            
-            <!-- Футер -->
-            <footer class="footer">
-                <p>© 2025 Все права защищены. Новости</p>
-            </footer>
-            
-        </div>
-    </body>
+            </section>
+        </main>
+        
+        <!-- Футер -->
+        <footer class="footer">
+            <p class="footer__text">© 2025 Все права защищены. Новости</p>
+        </footer>
+    </div>
+
+    <script src="../js/script.js" defer></script>
+</body>
 </html>

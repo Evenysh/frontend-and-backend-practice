@@ -483,133 +483,178 @@ body {
 
 /* ===== СТИЛИ ДЛЯ ВЕРТИКАЛЬНЫХ НОВОСТЕЙ ===== */
 
-.news-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
+/* Блок news */
+.news {
+    padding: var(--space-lg);
 }
 
-.news-page-title {
+.news__title {
+    color: var(--color-main);
+    margin-bottom: var(--space-sm);
+    font-size: 2rem;
     text-align: center;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-weight: 700;
 }
 
-.news-vertical {
+.news__subtitle {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    opacity: 0.8;
+}
+
+.news__list {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+/* Блок news-card */
 .news-card {
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e9ecef;
-    position: relative;
-    overflow: hidden;
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-lg);
     transition: all 0.3s ease;
-}
-
-.news-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    transition: width 0.3s ease;
-}
-
-/* Фиолетовая полоска для первой новости */
-.news-card:nth-child(1)::before {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Розовая полоска для второй новости */
-.news-card:nth-child(2)::before {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-/* Голубая полоска для третьей новости */
-.news-card:nth-child(3)::before {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.news-card:hover::before {
-    width: 8px;
+    border-left: 4px solid transparent;
+    position: relative;
 }
 
 .news-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.news-title {
-    color: #2c3e50;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    line-height: 1.3;
+.news-card__header {
+    margin-bottom: var(--space-md);
 }
 
-.news-meta {
+.news-card__title {
+    color: var(--color-main);
+    margin-bottom: var(--space-sm);
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.news-card__meta {
     display: flex;
-    gap: 15px;
-    color: #6c757d;
+    gap: var(--space-md);
     font-size: 0.9rem;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
+    color: var(--color-text);
+    opacity: 0.7;
 }
 
-.news-date {
-    font-weight: 600;
-    color: #667eea;
+.news-card__date {
+    font-weight: bold;
 }
 
-.news-author {
-    color: #495057;
+.news-card__author {
     font-style: italic;
 }
 
-.news-content {
-    color: #495057;
+.news-card__content {
+    margin-bottom: var(--space-lg);
+}
+
+.news-card__text {
     line-height: 1.6;
-    font-size: 1rem;
-    margin: 0;
+    color: var(--color-text);
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
-.current-page {
-    background: rgba(255, 255, 255, 0.2);
-    font-weight: 600;
+.news-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.news-card__button {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.news-card__button:hover {
+    background: var(--color-main);
+    transform: scale(1.05);
+}
+
+.news-card__button:active {
+    transform: scale(0.95);
+}
+
+.news-card__badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Модификатор --featured */
+.news-card--featured {
+    border-left-color: #e74c3c;
+    background: linear-gradient(135deg, var(--color-white) 0%, #fdf2f2 100%);
+}
+
+.news-card--featured .news-card__badge {
+    background: #e74c3c;
+}
+
+/* Модификатор --popular */
+.news-card--popular {
+    border-left-color: #f39c12;
+    background: linear-gradient(135deg, var(--color-white) 0%, #fef9f3 100%);
+}
+
+.news-card--popular .news-card__badge {
+    background: #f39c12;
+}
+
+/* Состояния для темной темы */
+[data-theme="dark"] .news-card {
+    background: var(--color-light);
+}
+
+[data-theme="dark"] .news-card--featured {
+    background: linear-gradient(135deg, var(--color-light) 0%, #2d1b1b 100%);
+}
+
+[data-theme="dark"] .news-card--popular {
+    background: linear-gradient(135deg, var(--color-light) 0%, #2d261b 100%);
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
-    .news-container {
-        padding: 20px 15px;
+    .news {
+        padding: var(--space-md);
     }
-
-    .news-page-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+    
+    .news__title {
+        font-size: 1.5rem;
     }
-
+    
     .news-card {
-        padding: 20px;
+        padding: var(--space-md);
     }
-
-    .news-title {
-        font-size: 1.2rem;
+    
+    .news-card__footer {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
     }
-
-    .news-meta {
-        flex-direction: column;  /* Ставим дату и автора в столбик */
-        gap: 5px;
+    
+    .news-card__meta {
+        flex-direction: column;
+        gap: var(--space-sm);
     }
 }
+
    
 
 
@@ -808,202 +853,394 @@ body {
 
 /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
 
-/* Основной контейнер контактов */
-main.contacts-container {
-    max-width: none !important;
-    padding: 40px 60px !important; /* Больше отступов по бокам */
+/* Блок contacts */
+.contacts {
+    padding: var(--space-lg);
 }
 
-.contacts-content {
-    max-width: 800px; /* Широкая область контента */
+.contacts__title {
+    color: var(--color-main);
+    margin-bottom: var(--space-sm);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contacts__subtitle {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    opacity: 0.8;
+}
+
+.contacts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.contacts-content {
-    width: 100%;
-}
-
-/* Заголовок страницы */
-.contacts-page-title {
+/* Блок contact-card */
+.contact-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-lg);
     text-align: center;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    font-weight: 700;
-    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contacts-page-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    margin: 15px auto;
-    border-radius: 2px;
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Карточка контактов */
-.contacts-card {
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e9ecef;
-    position: relative;
+.contact-card__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.contact-card__title {
+    color: var(--color-main);
+    margin-bottom: var(--space-sm);
+    font-size: 1.3rem;
+}
+
+.contact-card__value {
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+}
+
+.contact-card__button {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.contact-card__button:hover {
+    background: var(--color-main);
+    transform: scale(1.05);
+}
+
+.contact-card__button:active {
+    transform: scale(0.95);
+}
+
+.contact-card__status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.contact-card__status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #27ae60;
+}
+
+.contact-card__status-indicator--online {
+    background: #27ae60;
+}
+
+.contact-card__status-indicator--offline {
+    background: #e74c3c;
+}
+
+.contact-card__social-links {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Модификаторы contact-card */
+.contact-card--primary {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-white) 0%, #f0f8ff 100%);
+}
+
+.contact-card--accent {
+    border-color: #e74c3c;
+    background: linear-gradient(135deg, var(--color-white) 0%, #fdf2f2 100%);
+}
+
+.contact-card--social {
+    border-color: #f39c12;
+}
+
+.contact-card--action {
+    border-color: #27ae60;
+    background: linear-gradient(135deg, var(--color-white) 0%, #f3fdf2 100%);
+}
+
+/* Модификаторы кнопок */
+.contact-card__button--secondary {
+    background: var(--color-dark);
+}
+
+.contact-card__button--secondary:hover {
+    background: var(--color-main);
+}
+
+.contact-card__button--action {
+    background: #27ae60;
+}
+
+.contact-card__button--action:hover {
+    background: #219a52;
+}
+
+/* Социальные кнопки */
+.social-link {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.social-link--vk {
+    background: #4c75a3;
+    color: white;
+}
+
+.social-link--tg {
+    background: #0088cc;
+    color: white;
+}
+
+.social-link--wa {
+    background: #25d366;
+    color: white;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Модальное окно */
+.modal {
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: modalSlideIn 0.3s ease;
+    max-width: 500px;
+    width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal::backdrop {
+    background: rgba(0,0,0,0.6);
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal__content {
+    background: var(--color-white);
+    border-radius: 12px;
     overflow: hidden;
 }
 
-.contacts-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Контактная информация */
-.contact-info {
+.modal__header {
+    background: linear-gradient(135deg, var(--color-main) 0%, var(--color-dark) 100%);
+    color: white;
+    padding: var(--space-lg);
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+.modal__title {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
 }
 
-.contact-item:hover {
-    background-color: #f8f9fa;
-}
-
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.modal__close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
 }
 
-.contact-email .contact-icon {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+.modal__form {
+    padding: var(--space-lg);
 }
 
-.contact-address .contact-icon {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
+.modal__actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: flex-end;
+    margin-top: var(--space-lg);
 }
 
-.contact-phone .contact-icon {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    color: white;
+/* Форма */
+.form__group {
+    margin-bottom: var(--space-lg);
 }
 
-.contact-details {
-    flex: 1;
-}
-
-.contact-label {
-    font-size: 0.9rem;
-    color: #6c757d;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.contact-value {
-    font-size: 1.1rem;
-    color: #2c3e50;
-    font-weight: 500;
-}
-
-/* Кнопка звонка */
-.contact-button-container {
-    text-align: center;
-    width: 100%;
-    margin-top: 50px;
-}
-
-.contact-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    min-width: 200px;
+.form__label {
     display: block;
-    margin: 0 auto;
+    margin-bottom: var(--space-sm);
+    font-weight: 600;
+    color: var(--color-main);
 }
 
-.contact-button:hover {
+.form__input,
+.form__select,
+.form__textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 2px solid #e9ecef;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.form__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form__required {
+    color: #e74c3c;
+}
+
+/* Кнопки */
+.button {
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.button--primary {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #764ba2 100%);
+    color: white;
+}
+
+.button--primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-/* Анимация появления */
-@keyframes contactsAppear {
+.button--secondary {
+    background: #f8f9fa;
+    color: var(--color-text);
+    border: 2px solid #e9ecef;
+}
+
+.button--secondary:hover {
+    background: #e9ecef;
+}
+
+/* Анимации */
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(-50px) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
-.contacts-card {
-    animation: contactsAppear 0.6s ease forwards;
+/* Состояния для темной темы */
+[data-theme="dark"] .contact-card {
+    background: var(--color-light);
 }
 
-/* Адаптивность для мобильных устройств */
+[data-theme="dark"] .form__input,
+[data-theme="dark"] .form__select,
+[data-theme="dark"] .form__textarea {
+    background: var(--color-dark);
+    border-color: var(--color-main);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .button--secondary {
+    background: var(--color-dark);
+    border-color: var(--color-main);
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
-    .contacts-container {
-        padding: 20px 15px;
+    .contacts {
+        padding: var(--space-md);
     }
     
-    .contacts-card {
-        padding: 25px;
+    .contacts__title {
+        font-size: 1.5rem;
     }
     
-    .contacts-page-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+    .contacts__grid {
+        grid-template-columns: 1fr;
     }
     
-    .contact-item {
+    .contact-card {
+        padding: var(--space-md);
+    }
+    
+    .modal__actions {
         flex-direction: column;
-        text-align: center;
-        gap: 15px;
     }
     
-    .contact-icon {
-        align-self: center;
+    .button {
+        width: 100%;
     }
-}
-
-.contact-item p {
-    white-space: nowrap; /* Запрещает перенос текста на новую строку */
-}
-
-
-.contact-item p {
-    white-space: nowrap;
+    
+    .contact-card__social-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .social-link {
+        width: 100%;
+    }
 }

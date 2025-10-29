@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Семестровая работа</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение иконок Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <!-- Основной контейнер без отступов -->
+    <div class="container-fluid p-0">
+        
+        <!-- Шапка сайта -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Левая часть шапки -->
+                    <div class="col">
+                        <h1 class="h3 mb-1">Товары</h1>
+                        <p class="mb-0 opacity-75">Интернет-магазин плюшевых игрушек</p>
+                    </div>
+                    <!-- Правая часть шапки -->
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">Популярные</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигационное меню -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Кнопка для мобильного меню -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Основное меню -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- Пункт меню - Главная -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <!-- Пункт меню - Новости -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <!-- Пункт меню - Практики -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <!-- Пункт меню - Товары (активный) -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <!-- Пункт меню - Контакты -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Основное содержимое страницы -->
+        <main class="container my-4">
+            
+            <!-- Заголовок страницы товаров -->
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="text-center mb-3">Наши товары</h2>
+                    <p class="text-center text-muted">Лучшие плюшевые игрушки для детей и взрослых</p>
+                </div>
+            </div>
+
+            <!-- Сетка товаров -->
+            <div class="row g-4">
+                
+                <!-- Товар 1 - со скидкой -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm position-relative">
+                        <!-- Бейдж скидки -->
+                        <span class="position-absolute top-0 end-0 badge bg-danger m-2">-20%</span>
+                        <!-- Изображение товара -->
+                        <img src="../images/mishka.png" class="card-img-top p-3" alt="Плюшевый мишка" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Название товара -->
+                            <h5 class="card-title">Плюшевый мишка</h5>
+                            <!-- Описание товара -->
+                            <p class="card-text text-muted small">Мягкий и пушистый мишка для объятий</p>
+                            <!-- Цена товара -->
+                            <div class="mt-auto">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="h5 text-primary mb-0">4 000 ₽</span>
+                                    <small class="text-muted text-decoration-line-through ms-2">5 000 ₽</small>
+                                </div>
+                                <!-- Кнопка добавления в корзину -->
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 2 - популярный -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm position-relative">
+                        <!-- Бейдж "Хит" -->
+                        <span class="position-absolute top-0 end-0 badge bg-warning text-dark m-2">Хит</span>
+                        <!-- Изображение товара -->
+                        <img src="../images/kotik.png" class="card-img-top p-3" alt="Плюшевый котёнок" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Название товара -->
+                            <h5 class="card-title">Плюшевый котёнок</h5>
+                            <!-- Описание товара -->
+                            <p class="card-text text-muted small">Милый котик с мягкой шёрсткой</p>
+                            <!-- Цена товара -->
+                            <div class="mt-auto">
+                                <div class="mb-2">
+                                    <span class="h5 text-primary">2 000 ₽</span>
+                                </div>
+                                <!-- Кнопка добавления в корзину -->
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 3 - обычный -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Изображение товара -->
+                        <img src="../images/zayka.png" class="card-img-top p-3" alt="Плюшевый зайка" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Название товара -->
+                            <h5 class="card-title">Плюшевый зайка</h5>
+                            <!-- Описание товара -->
+                            <p class="card-text text-muted small">Весёлый зайчик с длинными ушками</p>
+                            <!-- Цена товара -->
+                            <div class="mt-auto">
+                                <div class="mb-2">
+                                    <span class="h5 text-primary">1 000 ₽</span>
+                                </div>
+                                <!-- Кнопка добавления в корзину -->
+                                <button class="btn btn-primary w-100">
+                                    <i class="bi bi-cart-plus me-1"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Товар 4 - в корзине -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <!-- Бейдж "В корзине" -->
+                        <span class="position-absolute top-0 start-0 badge bg-success m-2">В корзине</span>
+                        <!-- Изображение товара -->
+                        <img src="../images/mishka.png" class="card-img-top p-3" alt="Мишка премиум" style="height: 200px; object-fit: contain;">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Название товара -->
+                            <h5 class="card-title">Мишка премиум</h5>
+                            <!-- Описание товара -->
+                            <p class="card-text text-muted small">Эксклюзивный мишка премиум-класса</p>
+                            <!-- Цена товара -->
+                            <div class="mt-auto">
+                                <div class="mb-2">
+                                    <span class="h5 text-primary">8 000 ₽</span>
+                                </div>
+                                <!-- Кнопка - уже в корзине -->
+                                <button class="btn btn-success w-100" disabled>
+                                    <i class="bi bi-check-lg me-1"></i>В корзине
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Дополнительная информация -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Бесплатная доставка</h5>
+                            <p class="card-text">При заказе от 5000 рублей - доставка бесплатно!</p>
+                            <button class="btn btn-outline-primary">Подробнее об условиях</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Левая часть подвала -->
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Все права защищены. Товары</p>
+                    </div>
+                    <!-- Правая часть подвала с ссылками -->
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Доставка и оплата</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Подключение Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
